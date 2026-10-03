@@ -1,0 +1,6 @@
+
+slide 2:problem solution and comparision 
+slide 3: technical approach( process flow chart, actual implementation , techstack or real photos) 3 images in one slide
+slide 4: feasibility and viability (content should be pictural)
+slide 5: impact and benefits (content should be pictural and show before and after using graphs)
+slide 6: research and referancrences (all research ,tech, and resources in a ui like format images)

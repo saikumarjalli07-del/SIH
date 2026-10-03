@@ -1,0 +1,117 @@
+:root {
+  --bg:       #0F0F0F;
+  --surface:  #1A1A1A;
+  --surface-nested: #212121;
+  --border:   #2E2E2E;
+  --text:     #EDEDED;
+  --muted:    #757575;
+  --accent:   #C8F04A;
+  --accent-hover: #B8DC3A;
+  --alert:    #E85D3A;
+  --success:  #3ABA7A;
+
+  --font-heading: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+
+  --radius:   3px;
+  --radius-sm: 2px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout primitives data attributes */
+[data-ag-box], [data-ag-stack], [data-ag-grid] {
+  --ag-radius: var(--radius);
+  --ag-shadow: none;
+  --ag-border-color: var(--border);
+}
+
+/* Scrollbar concealment for panels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Range input slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+}
+
+/* Text and Number Inputs */
+input[type="number"],
+input[type="text"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  width: 100%;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+/* Antigravity card overrides */
+.ag-card, [class*="ag-card"] {
+  box-shadow: none !important;
+  border: 1px solid var(--border) !important;
+}
+
+button {
+  font-family: inherit;
+}
